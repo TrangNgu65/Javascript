@@ -1,0 +1,171 @@
+body {
+    background: #d8d8d8;
+    padding: 100px 0 0 0;
+    width: 100%;
+    height: 0;
+    
+}
+
+
+
+body, input, button{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+header{
+
+    background: #b2bfff;
+    width: 100%;
+    height: 80px;
+    top:0;
+    left:0;
+    position: fixed;
+    z-index:5;
+    padding: 15px;
+}
+header input{
+    width: 97%;
+    height: 50px; 
+    float: left;
+    background: rgba(255, 255, 255, 0.664);
+    border-style: none;
+border-top-left-radius: 50px;
+border-bottom-left-radius: 50px;
+border-top-right-radius: 50px;
+border-bottom-right-radius: 50px;
+outline:none;
+font-size: 18px;
+text-indent: 20px;
+padding: 10px;
+ 
+ 
+    /* apperance */
+    appearance: none;
+}
+
+header ::-webkit-input-placeholder{
+    color:rgba(14, 7, 7, 0.566);
+}
+header button{
+width: 70px;
+height: 70px;
+position: absolute; 
+top: 15px;
+right:25px;
+z-index: 2;
+border-radius: 100px;
+border: 1px solid #fff;
+background: #fff;
+box-shadow: 2px 2px rgba(14, 7, 7, 0.266);
+}
+
+/* Sets svg button color */
+header button svg .fill {
+    fill: #b2bfff;
+}
+.container{
+    
+width: 95%;
+   
+}
+ul.todo {
+ width: 97%;
+  
+}
+ul.todo li{
+    width:97%;
+    min-height: 20px;
+    padding: 14px 20px 14px 14px;
+    font-size:14px;
+    font-weight:500px; 
+    color:#444;
+    line-height: 22px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px rgba(14, 7, 7, 0.266);
+    list-style-type: none;
+    position: relative;
+    margin: 0 0 10px 0;
+    float: right;
+    
+    
+}
+
+    ul.todo li:last-child{
+        margin: 0;
+    }
+    ul.todo li .buttons {
+        width: 100px;
+        height: 50px; 
+        position: absolute;
+        top:0;
+        right:0;
+    }
+
+
+ul.todo li .buttons button {
+    width: 50px;
+    height:50px; 
+    float: left;
+    background:none;
+    border: 0px;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+ul.todo li .buttons button:last-of-type:before {
+    content:'';
+    width: 1px; 
+    height: 30px;
+    position: absolute;
+    top: 10px; 
+    left: 0px; 
+    background:#b2bfff;
+}
+/* Hover animation for side buttons */
+ul.todo li .buttons button.complete svg{
+    border-radius: 11px;
+    border: 1.5px solid #71fc88;
+    transition: background 0.2 ease;
+}
+ul.todo#completed li .buttons button.complete svg{
+    background:#71fc88;
+    border:0px;
+
+
+}
+ul.todo:not(#completed) li .buttons button.complete:hover svg{
+background:rgba(14, 7, 7, 0.566);
+}
+ul.todo:not(#completed) li .buttons button.complete:hover svg .fill{
+    fill:#fff;
+}
+ul.todo#completed li .buttons button.complete svg .fill{
+    fill:#fff;
+}
+
+
+
+
+ul.todo li .buttons button svg .fill{
+    transition:fill 0.2s ease;
+}
+ul.todo li .buttons button.remove svg{
+    width: 20px;
+    height: 20px;
+    fill:#444;
+}
+ul.todo li .buttons button.remove:hover svg{
+    fill:#e85656;
+}
+
+ul.todo li .buttons button.complete svg{
+    width: 20px;
+    height: 20px;
+    fill:#444;
+
+}
+ul.todo li .buttons button.complete:hover svg{
+    fill:#71fc88;
+}
